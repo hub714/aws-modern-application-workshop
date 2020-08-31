@@ -293,10 +293,12 @@ In this module, you will create a fully managed CI/CD stack that will automatica
 
 Today, we will be skipping over the CICD part to get to DynamoDB and API Gateway, so this has been automated. However, the instructions to set up CICD manually are still here.
 
-For this lab, run the shortcut command:
+For this lab, run these command:
 
 ```
-sudo ./create-cicd.sh
+cd ~/environment/aws-modern-application-workshop/module-2
+sudo yum install -y jq
+./create-cicd.sh
 ```
 
 <summary>If you would like the full instructions to create the CICD stack, click here</summary>
