@@ -1,7 +1,5 @@
 # Module 0: Event Engine Login
 
-![mysfits-welcome](../images/mysfits-welcome.png)
-
 **Time to complete:** 5 minutes
 
 In this pre-module, we will go over how to use the AWS Event Engine platform and how to get into your account. AWS Event Engine vends AWS accounts that are fully owned by AWS. They are active only for the duration of the event. In the event that you would like to continue the labs afterwards, you will have to start over on your own account.

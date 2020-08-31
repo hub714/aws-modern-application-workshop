@@ -291,6 +291,17 @@ Now that you have a service up and running, you may think of code changes that y
 
 In this module, you will create a fully managed CI/CD stack that will automatically deliver all of the code changes that you make to your code base to the service you created during the last module.  
 
+Today, we will be skipping over the CICD part to get to DynamoDB and API Gateway, so this has been automated. However, the instructions to set up CICD manually are still here.
+
+For this lab, run the shortcut command:
+
+```
+sudo ./create-cicd.sh
+```
+
+<summary>If you would like the full instructions to create the CICD stack, click here</summary>
+<details>
+
 First, we need to create another S3 bucket that will be used to store the temporary artifacts that are created in the middle of our CI/CD pipeline executions.  Choose a new bucket name for these artifacts and create one using the following CLI command:
 
 ```
@@ -346,6 +357,8 @@ aws ecr set-repository-policy --repository-name mythicalmysfits/service --policy
 ```
 
 When that has been created successfully, you have a working end-to-end CI/CD pipeline to deliver code changes automatically to your service in ECS.
+
+</details>
 
 ### Test the CI/CD Pipeline
 
