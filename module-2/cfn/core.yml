@@ -479,3 +479,6 @@ Outputs:
     Value: !GetAtt 'MythicalMysfitsServiceCodePipelineServiceRole.Arn'
     Export:
       Name: !Join [ ':', [ !Ref 'AWS::StackName', 'MythicalMysfitsServiceCodePipelineServiceRole' ] ]
+  MythicalArtifactBucket:
+    Description: S3 Bucket for Artifacts
+    Value: !Ref MythicalArtifactBucket
