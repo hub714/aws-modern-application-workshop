@@ -296,6 +296,7 @@ Today, we will be skipping over the CICD part to get to DynamoDB and API Gateway
 For this lab, run these command:
 
 ```
+git pull
 cd ~/environment/aws-modern-application-workshop/module-2
 sudo yum install -y jq
 ./create-cicd.sh
