@@ -30,7 +30,7 @@ sed -i -e 's@REPLACE_ME_CODEBUILD_ROLE_ARN@'"${cfnOutputs[CodeBuildRole]}"'@' \
        -e 's@REPLACE_ME_CODEPIPELINE_ROLE_ARN@'"${cfnOutputs[CodePipelineRole]}"'@' \
        -e 's@REPLACE_ME_ARTIFACTS_BUCKET_NAME@'"${cfnOutputs[MythicalArtifactBucket]}"'@' aws-cli/artifacts-bucket-policy.json
 
-sed -i -e 's@AWS_ACCOUNT_ID@'"${cfnOutputs[CurrentAccount]}"'@' \
+sed -i -e 's@REPLACE_ME_ACCOUNT_ID@'"${cfnOutputs[CurrentAccount]}"'@' \
        -e 's@REPLACE_ME_REGION@'"${cfnOutputs[CurrentRegion]}"'@' \
        -e 's@REPLACE_ME_CODEBUILD_ROLE_ARN@'"${cfnOutputs[CodeBuildRole]}"'@' aws-cli/code-build-project.json
 
@@ -42,6 +42,8 @@ sed -i -e 's@REPLACE_ME_CODEPIPELINE_ROLE_ARN@'"${cfnOutputs[CodePipelineRole]}"
 aws s3api put-bucket-policy --bucket ${cfnOutputs[MythicalArtifactBucket]} --policy file://~/environment/aws-modern-application-workshop/module-2/aws-cli/artifacts-bucket-policy.json
 
 aws codecommit create-repository --repository-name MythicalMysfitsService-Repository
+
+aws codebuild create-project --cli-input-json file://~/environment/aws-modern-application-workshop/module-2/aws-cli/code-build-project.json
 
 aws codepipeline create-pipeline --cli-input-json file://~/environment/aws-modern-application-workshop/module-2/aws-cli/code-pipeline.json
 
